@@ -1,0 +1,37 @@
+{
+  "app": "pnpm lint && pnpm dlx tsx bin/cloudfront-cdn-template.ts",
+  "watch": {
+    "include": [
+      "**"
+    ],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "**/*.d.ts",
+      "**/*.js",
+      "tsconfig.json",
+      "package*.json",
+      "yarn.lock",
+      "node_modules",
+      "test"
+    ]
+  },
+  "requireApproval": "never",
+  "versionReporting": false,
+  "pathMetadata": false,
+  "context": {
+    "default": {
+      "stackName": "astro-cloudfront-example",
+      "bucketName": "astro-cloudfront-example",
+      "cloudfront": {
+        "comment": "Astro CloudFront example",
+        "originAccessControl": {
+          "functionConfig": {
+            "name": "index-forward-astro-cf"
+          },
+          "name": "astro-cloudfront-example-oac"
+        }
+      }
+    }
+  }
+}
