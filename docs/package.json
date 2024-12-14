@@ -6,11 +6,29 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint . --ignore-pattern '.astro/*'",
+    "lint-fix": "eslint . --ignore-pattern '.astro/*' --fix"
   },
   "dependencies": {
     "@astrojs/markdoc": "^0.12.3",
-    "astro": "^5.0.5"
+    "astro": "^5.0.5",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.17.0",
+    "@eslint/markdown": "^6.2.1",
+    "@stylistic/eslint-plugin": "^2.12.1",
+    "@stylistic/eslint-plugin-js": "^2.12.1",
+    "@stylistic/eslint-plugin-plus": "^2.12.1",
+    "@stylistic/eslint-plugin-ts": "^2.12.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-mdx": "^3.1.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
   },
   "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
 }
