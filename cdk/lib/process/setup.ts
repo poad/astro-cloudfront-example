@@ -1,8 +1,7 @@
 import * as childProcess from 'child_process';
 import * as fs from 'fs';
-import * as path from 'path';
 
-export const compileBundles = () => {
+export const buildFrontend = () => {
   ['function'].forEach((f) => {
     fs.readdirSync(`${process.cwd()}/${f}`, {
       withFileTypes: true,
@@ -19,7 +18,7 @@ export const compileBundles = () => {
           });
         }
       });
-    ['pnpm install'].forEach((cmd) => {
+    ['pnpm install', 'pnpm build'].forEach((cmd) => {
       childProcess.execSync(cmd, {
         cwd: `${process.cwd()}/${f}/`,
         stdio: ['ignore', 'inherit', 'inherit'],
@@ -29,12 +28,22 @@ export const compileBundles = () => {
     });
   });
 
-  ['function'].forEach((f) => {
-    childProcess.execSync('pnpm build', {
-      cwd: path.resolve(`${process.cwd()}/${f}/`),
+  [`${process.cwd()}/../docs/dist`].forEach(
+    (dir) => {
+      if (fs.existsSync(dir)) {
+        fs.rmSync(dir, {
+          recursive: true,
+        });
+      }
+    },
+  );
+
+  ['pnpm build'].forEach((cmd) => {
+    childProcess.execSync(cmd, {
+      cwd: `${process.cwd()}/../docs`,
       stdio: ['ignore', 'inherit', 'inherit'],
       env: { ...process.env },
-      shell: process.env.SHELL || 'bash',
+      shell: 'bash',
     });
   });
 };
