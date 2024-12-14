@@ -102,7 +102,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
     });
 
     new deployment.BucketDeployment(this, 'DeployWebsite', {
-      sources: [deployment.Source.asset(`${process.cwd()}/../app/dist`)],
+      sources: [deployment.Source.asset(`${process.cwd()}/../docs/dist`)],
       destinationBucket: s3bucket,
       destinationKeyPrefix: '/',
       exclude: ['.DS_Store', '*/.DS_Store'],
