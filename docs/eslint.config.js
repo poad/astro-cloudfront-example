@@ -4,13 +4,15 @@ import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import stylisticTs from '@stylistic/eslint-plugin-ts';
 import tseslint from 'typescript-eslint';
+import * as mdx from 'eslint-plugin-mdx';
+import astro from 'eslint-plugin-astro';
+
 export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
   {
     ignores: [
       '**/*.d.ts',
       '*.{js,jsx}',
+      '*.svg',
       'src/tsconfig.json',
       'src/stories',
       '**/*.css',
@@ -18,8 +20,30 @@ export default tseslint.config(
       'out',
       'cdk.out',
       'dist',
+      '.astro/*',
     ],
-    files: ['src/**/*.ts'],
+    files: ['src/**/*.{js,ts,mdx,md,astro}'],
+  },
+  eslint.configs.recommended,
+  ...tseslint.configs.strict,
+  ...tseslint.configs.stylistic,
+  ...astro.configs.recommended,
+  {
+    files: ['src/**/*.{md,mdx}'],
+    ...mdx.flat,
+    ...mdx.flatCodeBlocks,
+    processor: mdx.createRemarkProcessor({
+      lintCodeBlocks: true,
+      languageMapper: {},
+    }),
+    rules: {
+      ...mdx.flatCodeBlocks.rules,
+      'no-var': 'error',
+      'prefer-const': 'error',
+    },
+  },
+  {
+    files: ['src/**/*.{js,ts}'],
     plugins: {
       '@stylistic': stylistic,
       '@stylistic/ts': stylisticTs,
