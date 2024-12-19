@@ -107,10 +107,10 @@ importers:
     dependencies:
       '@astrojs/markdoc':
         specifier: ^0.12.3
-        version: 0.12.3(astro@5.0.5(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1))
+        version: 0.12.3(astro@5.0.8(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1))
       astro:
-        specifier: ^5.0.5
-        version: 5.0.5(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
+        specifier: ^5.0.8
+        version: 5.0.8(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -1282,8 +1282,8 @@ packages:
     resolution: {integrity: sha512-F6NW1RJo5pp2kPnnM97M5Ohw8zAGjv83MpxHqfAochH68n/kiXN57+hYaNUCA7XkScoVNr6yzvly3hsY34TGfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.0.5:
-    resolution: {integrity: sha512-xfptdmurDsQcj/Anc7mU+eKlcyV7ppJIlmaSwhX3ZWwK5N/0rGKVmUqnuILgR6MB0XVJiIfublNzDGoyj4Q6BQ==}
+  astro@5.0.8:
+    resolution: {integrity: sha512-nW4TmRCeG3t2iDmm91KPvYpYNljNfjeaneN4BX463DKAZ3MPmUn92aKefOXC0bjMHQ2Gamc8MIZ6sORS2EhyAQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3426,13 +3426,13 @@ snapshots:
 
   '@astrojs/internal-helpers@0.4.2': {}
 
-  '@astrojs/markdoc@0.12.3(astro@5.0.5(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1))':
+  '@astrojs/markdoc@0.12.3(astro@5.0.8(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.2
       '@astrojs/markdown-remark': 6.0.1
       '@astrojs/prism': 3.2.0
       '@markdoc/markdoc': 0.4.0
-      astro: 5.0.5(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.8(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1)
       esbuild: 0.21.5
       github-slugger: 2.0.0
       htmlparser2: 9.1.0
@@ -4404,7 +4404,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@5.0.5(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1):
+  astro@5.0.8(@types/node@22.10.2)(rollup@4.28.1)(tsx@4.19.2)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
