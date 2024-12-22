@@ -1,14 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+
+import SideMenue from '../components/SideMenue.astro';
+
+const items = await getCollection("docs", (entry) => entry.data.lang === Astro.currentLocale);
+
+const { entry } = Astro.props
+const { Content } = await entry.render();
+
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{entry.data.title ?? 'Astro Basics'}</title>
 	</head>
 	<body>
-		<slot />
+    <div>
+      <ul id="menu-bar">
+        <li><a href="/ja">日本語</a></li>
+        <li><a href="/en">English</a></li>
+      </ul>
+    </div>
+    <main>
+      <div id="flex-container">
+        <div id="default">
+          <SideMenue items={items} />
+        </div>
+        <div id="flex-auto">
+          <Content />
+        </div>
+      </div>
+    </main>
 	</body>
 </html>
 
@@ -46,4 +72,35 @@
 		width: 100%;
 		height: 100%;
 	}
+
+  #flex-container {
+    /* border: 2px dashed gray; */
+    display: flex;
+  }
+
+  #flex-auto {
+    cursor: pointer;
+    background-color: wheat;
+
+    flex: auto;
+  }
+
+  #default {
+    background-color: lightblue;
+  }
+
+  ul#menu-bar {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid var(--border-color);
+    height: var(--top-nav-height);
+  }
+
+  #menu-bar li {
+    margin: 0;
+    padding: 10px;
+  }
 </style>
