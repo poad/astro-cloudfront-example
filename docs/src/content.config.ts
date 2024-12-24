@@ -1,9 +1,8 @@
-// 1. `astro:content`からユーティリティをインポート
 import { defineCollection } from 'astro:content';
-// 2. コレクションを定義
-const docsCollection = defineCollection({ /* ... */ });
-// 3. コレクションを登録するために、単一の`collections`オブジェクトをエクスポート
-//    このキーは、"src/content"のコレクションのディレクトリ名と一致する必要があります。
+import { docsLoader, i18nLoader } from '@astrojs/starlight/loaders';
+import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
+
 export const collections = {
-  'docs': docsCollection,
+  docs: defineCollection({ loader: docsLoader(), schema: docsSchema() }),
+  i18n: defineCollection({ loader: i18nLoader(), schema: i18nSchema() }),
 };
