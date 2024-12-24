@@ -1,36 +1,36 @@
 ---
-title: Starlightへようこそ
-description: Starlightでドキュメントサイトの構築を始めましょう。
+title: Welcome to Starlight
+description: Get started building your docs site with Starlight.
 template: splash
 hero:
- tagline: 新しいStarlightプロジェクトの構築、おめでとうございます！
- image:
-   file: ../../assets/houston.webp
- actions:
-   - text: サンプルガイド
-     link: /ja/guide
-     icon: right-arrow
-   - text: Starlightのドキュメントを読む
-     link: https://starlight.astro.build
-     icon: external
-     variant: minimal
+  tagline: Congrats on setting up a new Starlight project!
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Example Guide
+      link: /guides/example/
+      icon: right-arrow
+    - text: Read the Starlight docs
+      link: https://starlight.astro.build
+      icon: external
+      variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## 次のステップ
+## Next steps
 
 <CardGrid stagger>
- <Card title="コンテンツを更新" icon="pencil">
-   `src/content/docs/index.mdx`を編集してこのページを変更できます。
- </Card>
- <Card title="新しいコンテンツを追加" icon="add-document">
-   `src/content/docs`にMarkdownまたはMDXファイルを追加して新しいページを作成します。
- </Card>
- <Card title="サイトを設定" icon="setting">
-   `astro.config.mjs`でサイドバーやその他の設定を編集します。
- </Card>
- <Card title="ドキュメントを読む" icon="open-book">
-   詳しくは[Starlightのドキュメント](https://starlight.astro.build/)をご覧ください。
- </Card>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
 </CardGrid>

@@ -4,28 +4,25 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-  trailingSlash: 'never',
 	integrations: [
 		starlight({
-			title: {
-        en: 'My Docs',
-        ja: 'マイ ドキュメント',
-      },
+			title: 'My Docs',
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
-
-      defaultLocale: 'ja',
-      locales: {
-        // English docs in `src/content/docs/en/`
-        en: {
-          label: 'English',
-        },
-        // Simplified Chinese docs in `src/content/docs/zh-cn/`
-        ja: {
-          label: '日本語',
-        },
-      },
+			sidebar: [
+				{
+					label: 'Guides',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Example Guide', slug: 'guides/example' },
+					],
+				},
+				{
+					label: 'Reference',
+					autogenerate: { directory: 'reference' },
+				},
+			],
 		}),
 	],
 });
