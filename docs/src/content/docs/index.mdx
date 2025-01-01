@@ -17,6 +17,7 @@ hero:
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import { TextForm } from '../../components';
 
 ## Next steps
 
@@ -34,3 +35,5 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 		Learn more in [the Starlight Docs](https://starlight.astro.build/).
 	</Card>
 </CardGrid>
+
+<TextForm id="text" type="text" client:load />
