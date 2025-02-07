@@ -13,16 +13,16 @@
     "@astrojs/solid-js": "^5.0.4",
     "@astrojs/starlight": "^0.30.6",
     "@astrojs/tailwind": "^6.0.0",
-    "@kobalte/core": "^0.13.7",
+    "@kobalte/core": "^0.13.8",
     "@kobalte/tailwindcss": "^0.9.0",
-    "@tailwindcss/vite": "^4.0.3",
+    "@tailwindcss/vite": "^4.0.4",
     "astro": "^5.2.5",
     "sharp": "^0.33.5",
     "solid-js": "^1.9.4",
-    "tailwindcss": "^4.0.3"
+    "tailwindcss": "^4.0.4"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.3",
+    "@tailwindcss/postcss": "^4.0.4",
     "postcss": "^8.5.1",
     "solid-devtools": "^0.31.7"
   }
