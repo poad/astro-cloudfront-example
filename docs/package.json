@@ -15,14 +15,14 @@
     "@astrojs/tailwind": "^6.0.0",
     "@kobalte/core": "^0.13.9",
     "@kobalte/tailwindcss": "^0.9.0",
-    "@tailwindcss/vite": "^4.0.13",
-    "astro": "^5.4.3",
+    "@tailwindcss/vite": "^4.0.14",
+    "astro": "^5.5.2",
     "sharp": "^0.33.5",
     "solid-js": "^1.9.5",
-    "tailwindcss": "^4.0.13"
+    "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.13",
+    "@tailwindcss/postcss": "^4.0.14",
     "postcss": "^8.5.3",
     "solid-devtools": "^0.31.7"
   }
