@@ -10,19 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/solid-js": "^5.0.9",
+    "@astrojs/solid-js": "^5.0.10",
     "@astrojs/starlight": "^0.30.6",
     "@astrojs/tailwind": "^6.0.2",
     "@kobalte/core": "^0.13.9",
     "@kobalte/tailwindcss": "^0.9.0",
-    "@tailwindcss/vite": "^4.1.4",
-    "astro": "^5.7.5",
+    "@tailwindcss/vite": "^4.1.5",
+    "astro": "^5.7.10",
     "sharp": "^0.33.5",
-    "solid-js": "^1.9.5",
-    "tailwindcss": "^4.1.4"
+    "solid-js": "^1.9.6",
+    "tailwindcss": "^4.1.5"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.5",
     "postcss": "^8.5.3",
     "solid-devtools": "^0.31.7"
   }
