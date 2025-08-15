@@ -16,20 +16,20 @@
     "@stylistic/eslint-plugin-js": "^3.1.0",
     "@stylistic/eslint-plugin-plus": "^3.1.0",
     "@stylistic/eslint-plugin-ts": "^3.1.0",
-    "@types/node": "^22.17.0",
-    "aws-cdk": "^2.1023.0",
-    "eslint": "^9.32.0",
+    "@types/node": "^22.17.2",
+    "aws-cdk": "^2.1025.0",
+    "eslint": "^9.33.0",
     "eslint-plugin-import": "^2.32.0",
     "ts-node": "^10.9.2",
-    "tsx": "^4.20.3",
+    "tsx": "^4.20.4",
     "typescript": "^5.9.2",
-    "typescript-eslint": "^8.38.0",
+    "typescript-eslint": "^8.39.1",
     "vite": "^6.3.5",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "aws-cdk-lib": "^2.208.0",
+    "aws-cdk-lib": "^2.211.0",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21"
   }
