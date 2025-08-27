@@ -1,3 +1,7 @@
 packages:
-  - './cdk'
-  - './docs'
+  - ./cdk
+  - ./docs
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - esbuild
