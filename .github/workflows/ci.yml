@@ -1,5 +1,5 @@
 name: Build and Test
- 
+
 on:
   pull_request:
     branches:
@@ -22,6 +22,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         check-latest: true
+        package-manager-cache: false
 
     - uses: pnpm/action-setup@v4
       name: Install pnpm
