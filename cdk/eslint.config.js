@@ -1,9 +1,11 @@
 // @ts-check
 
 import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import stylistic from '@stylistic/eslint-plugin';
 import tseslint from 'typescript-eslint';
-export default tseslint.config(
+
+export default defineConfig(
   {
     ignores: [
       '**/*.d.ts',
@@ -23,11 +25,10 @@ export default tseslint.config(
     files: ['src/**/*.ts'],
     plugins: {
       '@stylistic': stylistic,
-      '@stylistic/ts': stylistic,
     },
     rules: {
       '@stylistic/semi': 'error',
-      '@stylistic/ts/indent': ['error', 2],
+      '@stylistic/indent': ['error', 2],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/arrow-parens': ['error', 'always'],
       '@stylistic/quates': ['error', 'single'],
