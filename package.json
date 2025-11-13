@@ -15,12 +15,12 @@
     "@stylistic/eslint-plugin": "^5.5.0",
     "eslint": "^9.39.1",
     "eslint-plugin-import": "^2.32.0",
-    "pnpm": "^10.21.0",
+    "pnpm": "^10.22.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.3",
+    "typescript-eslint": "^8.46.4",
     "vite": "^6.4.1",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
-  "packageManager": "pnpm@10.21.0"
+  "packageManager": "pnpm@10.22.0"
 }
