@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@astrojs/solid-js": "^6.0.1",
-    "@astrojs/starlight": "^0.38.1",
+    "@astrojs/starlight": "^0.38.2",
     "@astrojs/tailwind": "^6.0.2",
     "@kobalte/core": "^0.13.11",
     "@kobalte/tailwindcss": "^0.9.0",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.0.7",
+    "astro": "^6.0.8",
     "sharp": "^0.34.5",
     "solid-js": "^1.9.11",
     "tailwindcss": "^4.2.2"
