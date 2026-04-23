@@ -16,14 +16,14 @@
     "@kobalte/core": "^0.13.11",
     "@kobalte/tailwindcss": "^0.9.0",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.1.6",
+    "astro": "^6.1.7",
     "sharp": "^0.34.5",
     "solid-js": "^1.9.12",
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.2",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.10",
     "solid-devtools": "^0.34.5"
   }
 }
