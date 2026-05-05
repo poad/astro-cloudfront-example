@@ -1,10 +1,10 @@
+import { compileBundles } from './process/setup.js';
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as origins from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as iam from 'aws-cdk-lib/aws-iam';
-import { compileBundles } from './process/setup';
 import * as deployment from 'aws-cdk-lib/aws-s3-deployment';
 
 export interface Config extends cdk.StackProps {
@@ -22,7 +22,7 @@ export interface Config extends cdk.StackProps {
 }
 
 interface CloudfrontCdnTemplateStackProps extends Config {
-  environment?: string;
+  readonly environment?: string;
 }
 
 function websiteIndexPageForwardFunctionResolver(stack: cdk.Stack, functionConfig: {
@@ -37,7 +37,7 @@ function websiteIndexPageForwardFunctionResolver(stack: cdk.Stack, functionConfi
         functionName,
         functionArn: functionConfig.arn,
       },
-    )
+    );
   }
   return new cloudfront.Function(stack, 'WebsiteIndexPageForwardFunction', {
     functionName,
@@ -112,7 +112,7 @@ export class CloudfrontCdnTemplateStack extends cdk.Stack {
     });
 
     const oac = new cloudfront.S3OriginAccessControl(this, 'OriginAccessControl', {
-      originAccessControlName: originAccessControl!.functionConfig.name,
+      originAccessControlName: originAccessControl?.functionConfig.name,
       signing: cloudfront.Signing.SIGV4_NO_OVERRIDE,
     });
 

@@ -1,6 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
-import * as CloudfrontCdnTemplateStackProps from '../lib/cloudfront-cdn-template-stack';
+import * as CloudfrontCdnTemplateStackProps from '../lib/cloudfront-cdn-template-stack.js';
 import { test } from 'vitest';
 
 test('CloudFront Created', () => {
