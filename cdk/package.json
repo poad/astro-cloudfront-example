@@ -16,7 +16,7 @@
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@types/node": "^24.12.2",
+    "@types/node": "^24.12.3",
     "@vitest/eslint-plugin": "^1.6.16",
     "aws-cdk": "^2.1121.0",
     "eslint": "^10.3.0",
