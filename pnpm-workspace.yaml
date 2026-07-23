@@ -10,12 +10,17 @@ allowBuilds:
 minimumReleaseAge: 10080 # 7 days in minutes
 
 minimumReleaseAgeExclude:
-  - pnpm@11.9.0
-  - esbuild@0.28.1
+  - pnpm@11.16.0
+  - astro@7.0.4 || 7.0.6 || 7.0.10
+  - sharp@0.35.0
 
 overrides:
+  astro@<7.0.6: ^7.0.10
+  astro@>=2.9.0 <=7.0.9: ^7.0.10
+  astro@>=3.10.0 <7.0.4: ^7.0.10
   chokidar: '>=5'
   esbuild@>=0.27.3 <0.28.1: ^0.28.1
   semver: '>=7'
+  sharp@<0.35.0: ^0.35.0
 
 trustPolicy: no-downgrade
