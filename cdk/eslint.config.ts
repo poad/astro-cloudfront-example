@@ -1,6 +1,6 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { defineConfig } from 'eslint/config';
+import { defineConfig, includeIgnoreFile } from 'eslint/config';
 import cdkPlugin from 'eslint-plugin-awscdk';
 import eslint from '@eslint/js';
 import { configs, parser } from 'typescript-eslint';
@@ -12,8 +12,6 @@ import vitest from '@vitest/eslint-plugin';
 
 // @ts-expect-error ignore type errors
 import pluginPromise from 'eslint-plugin-promise';
-
-import { includeIgnoreFile } from '@eslint/compat';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
