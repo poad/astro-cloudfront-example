@@ -13,7 +13,7 @@
     "@astrojs/solid-js": "^7.0.2",
     "@astrojs/starlight": "^0.42.0",
     "@astrojs/tailwind": "^6.0.2",
-    "@kobalte/core": "^0.13.13",
+    "@kobalte/core": "^0.13.14",
     "@kobalte/tailwindcss": "^0.9.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.1",
