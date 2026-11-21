@@ -9,7 +9,7 @@
   ],
   "compilerOptions": {
     "jsx": "preserve",
-    "jsxImportSource": "solid-js",
+    "jsxImportSource": "@solidjs/web",
     "moduleResolution": "bundler"
   }
 }
